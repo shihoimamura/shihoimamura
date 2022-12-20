@@ -15,7 +15,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(content: params[:post][:content])
     @post = Post.new(post_params)
     if params[:back]
       render :new
